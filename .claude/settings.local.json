@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(del /Q \"public\\vite.svg\")",
+      "Bash(del /Q \"src\\assets\\react.svg\")",
+      "Bash(rm:*)"
+    ],
+    "deny": []
+  }
+}
