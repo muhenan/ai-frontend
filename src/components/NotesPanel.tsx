@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { formatDateForDisplay, formatDateTimeForDisplay, formatTimeForDisplay } from '../utils/dateHelpers';
 import { generateNoteId } from '../utils/notesStorage';
 import type { Note, DateKey, NotesActions } from '../types/notes';
@@ -23,7 +23,7 @@ const NotesPanel: React.FC<NotesPanelProps> = ({
   const [editorContent, setEditorContent] = useState('');
   const [saveStatus, setSaveStatus] = useState('');
   const editorRef = useRef<HTMLTextAreaElement>(null);
-  const debounceRef = useRef<NodeJS.Timeout>();
+  const debounceRef = useRef<number | null>(null);
 
   const selectedNote = notes.find(note => note.id === selectedNoteId);
   const sortedNotes = [...notes].sort((a, b) => 

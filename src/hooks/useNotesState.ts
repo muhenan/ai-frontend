@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { saveNotesToStorage, loadNotesFromStorage, generateNoteId } from '../utils/notesStorage';
 import type { NotesState, NotesActions, Note, DateKey } from '../types/notes';
 
